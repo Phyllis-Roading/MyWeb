@@ -1,0 +1,480 @@
+﻿        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        body
+        {
+            font-family:tahoma,helvetica,arial,'bitstream vera sans',sans-serif;
+            font-size: 12px;
+            text-align: center;
+        }
+        div
+        {
+            text-align: left;
+            line-height: 19px;
+        }
+        a
+        {
+            color: rgb(0,0,0);
+            text-decoration: none;
+        }
+        
+        li
+        {
+            float: left;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        input, textarea
+        {
+            font-size: 12px;
+            padding: 3px;
+        }
+        .headArea
+        {
+            position: relative;
+            height: 40px;
+        }
+        #headLine
+        {
+            width: 100%;
+            background: url(picture/headLine.jpg) repeat-x scroll 0% 0% transparent;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 42px;
+        }
+        .hL
+        {
+            height: 42px;
+            width: 1002px;
+            margin: 0px auto;
+        }
+        .kxlogo
+        {
+            float: left;
+            width: 99px;
+            height: 30px;
+            margin: 5px 31px 0px 10px;
+            display: inline;
+        }
+        .logo_link
+        {
+            display: block;
+            height: 30px;
+        }
+        .headRight
+        {
+            float: right;
+            color: rgb(204,204,204);
+            margin: 0px 12px 1px 0px;
+        }
+        .headlink
+        {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 2px;
+            width: auto;
+            display: block;
+            color: rgb(250,217,219);
+            text-decoration: none;
+        }
+        .headlink:hover
+        {
+            background:rgb(211,44,71);
+        }
+        .headlink b
+        {
+            line-height: 15px;
+            display: block;
+            height: 15px;
+            font-weight: 400;
+            padding: 12px 4px 13px;
+        }
+        .div_daohang
+        {
+            background-color: White;
+            left:-495%;
+            width: 201px;
+            height: 261px;
+            position: absolute;
+            z-index: 3;
+            display: none;
+            border: 1px solid rgb(187,187,187);
+        }
+        .navigationLink
+        {
+            
+            display: block;
+            height: 29px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .navigationLink:hover
+        {
+            background:rgb(211,44,71);
+        }
+        #bodyContent
+        {
+            margin: 0px auto;
+            width: 1002px;
+            padding-top: 41px;
+            height: 596px;
+            border-bottom: 1px solid rgb(187,187,187);
+        }
+        .left_cont
+        {
+            float: left;
+            width: 515px;
+            height: 560px;
+            margin: 29px 0px 0px 74px;
+            display: inline;
+        }
+        .left_title
+        {
+            position: relative;
+        }
+        .left_title h3
+        {
+            display: block;
+            font-size: 20px;
+            font-family: 幼圆;
+            color: rgb(105,105,105);
+            margin: 9px 0px 27px -2px;
+        }
+        .title
+        {
+            width: 315px;
+            height: 52px;
+            background: url(picture/title.jpg) no-repeat scroll 0% 0% transparent;
+        }
+        .reg_title
+        {
+            float: left;
+            width: 68px;
+            height: 26px;
+            padding-top: 2px;
+        }
+        .reg_cont
+        {
+            float: left;
+            width: 255px;
+            position: relative;
+        }
+        .mail_box
+        {
+            display:none;
+            width:238px;
+            height:auto; 
+            border:solid 1px rgb(187,187,187);
+            font-size:12px;
+            position:absolute;
+            z-index:2;
+            left:0;
+            background-color:White;
+            top:25px;
+        }
+        .mail_box_span
+        {
+            padding-left:6px;
+            cursor:pointer;
+        }
+        .mail_box_span:hover
+        {
+            background-color:rgb(187,187,187);
+        }
+        .hiding
+        {
+		    position:absolute;
+		    left:96%;
+		    top:0%;
+            width: 180px;
+            height: 45px;
+            float: right;
+            border: 1px;
+            z-index:1;
+        }
+        .check_div
+        {
+            position:absolute;
+            width:178px;
+            height:24px;
+            z-index:2;
+        }
+        #mail_check_div_N
+        {
+            position:absolute;
+            z-index:3;
+            display:none;
+        }
+		.mail_tip_N
+		{   
+		   float:right;
+		   width:145px;
+		   height:23px;
+		   border: 1px solid #dbdbdb;
+		   border-left:0px;
+		   background-color: #ffffcd;
+		}
+		.mail_tip
+		{
+		   width:185px;
+		   height:42px;
+           border: 1px solid #dbdbdb;
+		   border-left:0px;
+		}
+		i{font-style: normal;color: #d32503; padding-left:5px;}
+        #pwd_check_div_N
+        {
+            position:absolute;
+            z-index:3;
+            display:none;
+        }
+        .pwd_tip_N
+        {
+           float:right;
+		   width:145px;
+		   height:42px;
+		   border: 1px solid #dbdbdb;
+		   border-left:0px;
+		   background-color: #ffffcd;
+        }
+        .pwd_tip
+		{
+		   width:185px;
+		   height:42px;
+           border: 1px solid #dbdbdb;
+		   border-left:0px;
+		}
+        #user_name_check_div_N
+        {
+            position:absolute;
+            z-index:3;
+            display:none;
+        }
+        .user_name_tip_N
+        {
+           float:right;
+		   width:145px;
+		   height:23px;
+		   border: 1px solid #dbdbdb;
+		   border-left:0px;
+		   background-color: #ffffcd;
+        }
+        .user_name_tip
+		{
+		   width:185px;
+		   height:23px;
+           border: 1px solid #dbdbdb;
+		   border-left:0px;
+		}
+		#city_box
+		{
+		   display:none;
+		}
+		.city_content
+		{
+		   position:absolute;
+		   width:453px;
+		   height:auto;
+		   border: 1px solid #c8c8c8;
+		   border-top:0px;
+		   background-color:#f7f7f7;
+	
+		}
+		.city_m
+		{
+		   position:relative;
+		   top:15px;
+		   width:420px;
+		   background-color:White;
+		   line-height: 180%;
+		   border: solid 1px #c8c8c8;
+		   padding:3px 3px 3px 7px;
+		   margin:0px auto;
+		}
+		.city_span 
+		{
+		   cursor:pointer;
+		   padding:2px 6px;
+		   color:#369;
+		}
+		.city_span:hover
+		{
+		    text-decoration:underline;
+		}
+		.city_s
+		{
+		   position:relative;
+		   top:20px;
+		   width:420px;
+		   background-color:White;
+		   line-height: 180%;
+		   border: solid 1px #c8c8c8;
+		   padding:3px 3px 3px 7px;
+		   margin:0px auto;
+		}
+		.btn_area
+		{
+		    position:relative;
+		    top:15px;
+		    padding:3px 3px 3px 7px;
+		    margin:0px auto;
+		    height:45px;
+		    padding: 10px 0 4px 407px;
+		}
+        .box
+        {
+            display: table;
+            border: 1px solid rgb(187,187,187);
+            margin-bottom: 4px;
+        }
+        .explan
+        {
+            line-height: 13px;
+            padding-top: 2px;
+            clear: both;
+        }
+        .c9
+        {
+            color: rgb(153,153,153);
+        }
+        .txt
+        {
+            height: 15px;
+            width: 230px;
+            border: 1px solid rgb(255,255,255);
+        }
+        .reg_bt
+        {
+            padding-left: 67px;
+            margin: -4px 0px 15px;
+            width: 427px;
+        }
+        .btn_yes
+        {
+            display: -moz-inline-stack;
+            vertical-align: middle;
+            border: 1px solid rgb(249,164,178);
+        }
+        .right_cont
+        {
+            float: left;
+            margin: 38px 0px 0px;
+            border: 1px solid rgb(238,238,238);
+            height: auto;
+            padding: 0px;
+            width: 344px;
+        }
+        .right_head
+        {
+            text-align: left;
+            padding: 21px 0px 30px 30px;
+            display: block;
+        }
+        .QQ
+        {
+            width: 62px;
+            height: 62px;
+            display: block;
+            float: left;
+            margin-right: 10px;
+            background: url(picture/qq.jpg) no-repeat scroll left top transparent;
+        }
+        .TY
+        {
+            width: 62px;
+            height: 62px;
+            display: block;
+            float: left;
+            margin-right: 10px;
+            background: url(picture/TY.jpg) no-repeat scroll left top transparent;
+        }
+        .MSN
+        {
+            width: 62px;
+            height: 62px;
+            display: block;
+            float: left;
+            margin-right: 10px;
+            background: url(picture/MSN.jpg) no-repeat scroll left top transparent;
+        }
+        .sina
+        {
+            width: 62px;
+            height: 62px;
+            display: block;
+            float: left;
+            margin-right: 10px;
+            background: url(picture/sina.jpg) no-repeat scroll left top transparent;
+        }
+        .bor
+        {
+            height: 2px;
+            line-height: 7px;
+            border-top: 1px solid rgb(239,239,239);
+            border-bottom: 1px solid rgb(255,255,255);
+            margin-top: 100px;
+            clear: left;
+        }
+        .right_footer
+        {
+            width: 351px;
+            height: 190px;
+            background: url(picture/right_footer.jpg) repeat scroll 0% 0% transparent;
+        }
+        .rest_reg_box
+        {
+            margin-top: 12px;
+            margin-left: 30px;
+        }
+        .clearfix
+        {
+            display: block;
+        }
+        #footer
+        {
+            width: 1001px;
+            height: auto;
+            margin: 0px auto;
+            padding: 0px 0px 50px;
+        }
+        .left
+        {
+            float: left;
+            line-height: 40px;
+            margin-left: -8px;
+        }
+        .left a
+        {
+            color: rgb(51,102,153);
+            text-decoration: none;
+            margin: 0px 8px;
+        }
+        .right
+        {
+            line-height: 40px;
+            float: right;
+            color: rgb(153,153,153);
+        }
+        .footInfo
+        {
+            clear: both;
+            height: 27px;
+            line-height: 27px;
+            background: none repeat scroll 0% 0% rgb(240,239,239);
+            text-align: center;
+            color: rgb(153,153,153);
+        }
+        .footInfo span
+        {
+            line-height: 26px;
+            vertical-align: top;
+            padding-left: 17px;
+            margin-right: 15px;
+        }
+        .footNobg
+        {
+            background: none repeat scroll 0% 0% transparent;
+        }
