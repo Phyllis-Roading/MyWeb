@@ -103,7 +103,7 @@ tip.prototype=(function()
 	       else{result=false;}
             
 	   }
-	   else
+	   else if(id=="user_name")
 	   {
 	       for(var i=0;i<document.getElementById(id).value.length;i++) 
            {
@@ -112,6 +112,8 @@ tip.prototype=(function()
            if(result && (document.getElementById(id).value.length==3||document.getElementById(id).value.length==2)){result=true;}
 	       else{ result=false;}
         }
+        else{result=true;}
+        
 	   return result;
 	}
 
@@ -132,6 +134,24 @@ function prepareTip()
 	var user_name_event=document.getElementById("user_name");
 	window.addEvent(user_name_event,'focus',focusFn);
 	window.addEvent(user_name_event,'blur',blurFn);
+	//性别操作
+	var sex_event=document.getElementById("sex_M");
+	window.addEvent(sex_event,'focus',clickFn);
+	var sex_event=document.getElementById("sex_W");
+	window.addEvent(sex_event,'focus',clickFn);
+	//生日操作
+	var year_event=document.getElementById("year");
+	window.addEvent(year_event,'change',date_judge);
+    var month_event=document.getElementById("month");
+	window.addEvent(month_event,'change',date_judge);
+	//现在情况
+	var state_event=document.getElementById("working");
+	window.addEvent(state_event,'focus',clickFn);
+	var state_event=document.getElementById("studying");
+	window.addEvent(state_event,'focus',clickFn);
+
+
+
 	/* 暂时注销掉
 	var n=document.getElementById("name");
 	window.addEvent(n,'blur',blurFn);
@@ -203,4 +223,63 @@ function prepareTip()
 	}
 	var t=new tip(title,"original",this.id);
 	t.showTip();
+ }
+ function clickFn()
+ {
+	 if(this.id=="sex_M"||this.id=="sex_W")
+         document.getElementById("sex_check_div_Y").style.display="block";
+	 else if(this.id=="working"||this.id=="studying")
+         document.getElementById("state_check_div_Y").style.display="block";	
+ }
+ function date_judge()
+ {
+	 if (this.id=="year")
+	 {
+		 document.getElementById("month").value=" ";
+	 }
+	 else if (this.id=="month")
+	 {
+		 document.getElementById("day").value=" ";
+		 var year=document.getElementById("year").selectedIndex;
+         var month=document.getElementById("month").selectedIndex;
+    
+         switch(month)
+         {
+
+             case 01:
+             case 03:
+             case 05:
+             case 07:
+		     case 08:
+             case 10:
+             case 12:
+                 document.getElementById("day29").style.display="none";
+                 document.getElementById("day30").style.display="none";
+                 document.getElementById("day31").style.display="none";
+                 break;
+            case 04:
+            case 06:
+            case 09:
+            case 11:
+                 document.getElementById("day29").style.display="inline";
+                 document.getElementById("day30").style.display="inline";
+                 document.getElementById("day31").style.display="none";
+				 alert("11");
+                 break;
+            case 02:
+                 if((year%4==0&&year%100!=0)||(year%400==0))
+                 {
+                     document.getElementById("day29").style.display="inline";
+                     document.getElementById("day30").style.display="none";
+                     document.getElementById("day31").style.display="none";
+                 }
+                 else
+                 {
+                     document.getElementById("day29").style.display="none";
+                     document.getElementById("day30").style.display="none";
+                     document.getElementById("day31").style.display="none";
+                 }
+                 break;
+         }
+	 }
  }

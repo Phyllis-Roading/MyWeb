@@ -122,7 +122,7 @@
  //**************************************
  //日期
 function panduan()
-{
+{alert("dwqdwedwef");
     var year=document.getElementById("year").selectedIndex;
     var month=document.getElementById("month").selectedIndex;
     
@@ -138,6 +138,7 @@ function panduan()
              document.getElementById("day29").style.display="inline";
              document.getElementById("day30").style.display="inline";
              document.getElementById("day31").style.display="inline";
+			 
              break;
         case 4:
         case 6:
@@ -217,10 +218,10 @@ window.onload=function ()
          document.getElementById("user_name").attachEvent("onblur",user_name_Hiding );
           //选择邮箱类型
           
-         document.getElementById("checkbox_M").attachEvent("onclick",sex_checkbox );
-         document.getElementById("checkbox_W").attachEvent("onclick",sex_checkbox );
-         document.getElementById("checkbox_working").attachEvent("onclick",state_checkbox );
-         document.getElementById("checkbox_studying").attachEvent("onclick",state_checkbox );
+        // document.getElementById("checkbox_M").attachEvent("onclick",sex_checkbox );
+        // document.getElementById("checkbox_W").attachEvent("onclick",sex_checkbox );
+         //document.getElementById("checkbox_working").attachEvent("onclick",state_checkbox );
+         //document.getElementById("checkbox_studying").attachEvent("onclick",state_checkbox );
 
     }
     else
@@ -238,13 +239,13 @@ window.onload=function ()
          document.getElementById("user_name").addEventListener("blur",user_name_Hiding,false);
          //选择邮箱类型
          document.getElementById("mail_qq").addEventListener("click",choosemail,false);
-         document.getElementById("checkbox_M").addEventListener("click",sex_checkbox,false);
-         document.getElementById("checkbox_W").addEventListener("click",sex_checkbox,false);
-         document.getElementById("checkbox_working").addEventListener("click",state_checkbox,false);
-         document.getElementById("checkbox_studying").addEventListener("click",state_checkbox,false);
+         //document.getElementById("checkbox_M").addEventListener("click",sex_checkbox,false);
+        // document.getElementById("checkbox_W").addEventListener("click",sex_checkbox,false);
+        // document.getElementById("checkbox_working").addEventListener("click",state_checkbox,false);
+        // document.getElementById("checkbox_studying").addEventListener("click",state_checkbox,false);
          
          document.getElementById("month").addEventListener("change",panduan,false);
-         document.getElementById("day").addEventListener("change",date_select,false);
+        // document.getElementById("day").addEventListener("change",date_select,false);
 
     }
 
