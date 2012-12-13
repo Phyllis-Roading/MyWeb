@@ -304,8 +304,9 @@
 		{
 		    text-decoration:underline;
 		}
-		.city_s
+		#city_S
 		{
+		   display:none;
 		   position:relative;
 		   top:20px;
 		   width:420px;

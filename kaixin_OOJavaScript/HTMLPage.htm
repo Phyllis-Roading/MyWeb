@@ -2,7 +2,7 @@
 <html><head><title>开心网</title>
    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
    
-   <script type="text/jscript" src="OO_JScript.js"></script>
+   <script type="text/javascript" src="OO_JScript.js"></script>
 </head>
 <body onload="prepareTip()">
     <div class="headArea">
@@ -62,17 +62,17 @@
                             <input id="mail" type="text" class="txt" maxlength="100" />
                         </span>
                         <div class="mail_box" id="mail_box">
-                           <span style="padding-left:6px;">请选择邮箱类型</span>
-                           <span class="mail_box_span" id="mail_qq" style="display:block;">@qq.com</span>
-                           <span class="mail_box_span" id="mail_126" style="display:block;">@126.com</span>
-                           <span class="mail_box_span" id="mail_163" style="display:block;">@163.com</span>
-                           <span class="mail_box_span" id="mail_sinaM" style="display:block;">@sina.com</span>
-                           <span class="mail_box_span" id="mail_sinaN" style="display:block;">@sina.cn</span>
-                           <span class="mail_box_span" id="mail_hotmail" style="display:block;">@hotmail.com</span>
-                           <span class="mail_box_span" id="mail_gmail" style="display:block;">@gmail.com</span>
-                           <span class="mail_box_span" id="mail_sohu" style="display:block;">@sohu.cn</span>
-                           <span class="mail_box_span" id="mail_yahoo" style="display:block;">@yahoo.cn</span>
-                           <span class="mail_box_span" id="mail_139" style="display:block;">@139.cn</span>                           
+                           <div style="padding-left:6px;">请选择邮箱类型</div>
+                           <div class="mail_box_span" id="mail_qq" value="@qq.com">@qq.com</div>
+                           <div class="mail_box_span" id="mail_126" value="@126.com">@126.com</div>
+                           <div class="mail_box_span" id="mail_163" value="@163.com">@163.com</div>
+                           <div class="mail_box_span" id="mail_sinaM" value="@sina.com">@sina.com</div>
+                           <div class="mail_box_span" id="mail_sinaN" value="@sina.cn">@sina.cn</div>
+                           <div class="mail_box_span" id="mail_hotmail" value="@hotmail.com">@hotmail.com</div>
+                           <div class="mail_box_span" id="mail_gmail" value="@gmail.com">@gmail.com</div>
+                           <div class="mail_box_span" id="mail_sohu" value="@sohu.cn">@sohu.cn</div>
+                           <div class="mail_box_span" id="mail_yahoo" value="@yahoo.cn">@yahoo.cn</div>
+                           <div class="mail_box_span" id="mail_139" value="@139.cn">@139.cn</div>                           
                         </div>
                         <div class="c9 explan">
                             如果没有邮箱，你可以用 <a href="#" style="color:blue">账号注册</a>
@@ -91,7 +91,7 @@
                     <span class="reg_title" style="width: 67px">创建密码：</span>
                     <div class="reg_cont">
                         <span class="box">
-                            <input id="pwd" type="password" class="txt" maxlength="100" name="txt" />
+                            <input id="pwd" type="password" class="txt" maxlength="20" name="txt"/>
                         </span>
                         <div class="hiding">
                             <div class="check_div">
@@ -106,7 +106,7 @@
                     <span class="reg_title" style="width: 67px">姓 &nbsp&nbsp 名：</span>
                     <div class="reg_cont">
                         <span class="box">
-                            <input id="user_name" type="text" class="txt" maxlength="100" name="txt" />
+                            <input id="user_name" type="text" class="txt" name="txt" />
                         </span>
                         <div class="hiding">
                             <div class="check_div">
@@ -128,7 +128,8 @@
                              女</label>
                          <div class="hiding">
                              <div class="check_div">
-                                 <div id="sex_check_div_Y" style="display: none"><img src="picture/Yes.jpg" alt="" /></div>
+                                 <div id="sex_check_div_Y" style="display: none">
+								 <img src="picture/Yes.jpg" alt="" /></div>
                              </div>
                          </div>
                      </div>
@@ -344,13 +345,13 @@
                 <li id="address" style="margin-top: -13px;">
                     <span class="reg_title" style="width: 67px">居  住  地：</span>
                     <div class="reg_cont" style="margin-top: 3px">
-                        <input id="city" style="width: 139px;height: 15px; cursor:pointer" onclick="city_choose()" value="请选择居住地" />
+                        <input id="city" style="width: 139px;height: 15px; cursor:pointer" value="请选择居住地" />
                         <div id="city_box">
                             <img src="picture/city.jpg" alt="" />
                             <div class="city_content">
                                 <div class="city_m">
                                     <span id="bj" class="city_span">北京</span>
-                                    <span id="sh" class="city_span">上海</span>
+                                    <span id="shh" class="city_span">上海</span>
                                     <span id="tj" class="city_span">天津</span>
                                     <span id="chq" class="city_span">重庆</span>
                                     <span id="hlj" class="city_span">黑龙江</span>
@@ -385,12 +386,16 @@
                                     <span id="am" class="city_span">澳门</span>
                                     <span id="hw" class="city_span">海外</span>
                                 </div>
-                                <div class="city_s">
-                                <span id="Span1" class="city_span">•北京</span>
-                                    <span id="Span2" class="city_span">•上海</span>
-                                </div>
-                                <div class="btn_area"><span><input type="button" value="关闭" onclick="city_close()" /></span></div>
+                                <div id="city_S"></div>
+                                <div class="btn_area"><span><input id="city_box_Close" type="button" value="关闭" /></span></div>
                             </div>
+                        </div>
+						 <div class="hiding">
+                            <div class="check_div">
+                                <div id="city_check_div_Y" style="display: none">
+                                    <img src="picture/Yes.jpg" alt="" /></div>
+                            </div>
+							<div id="city_tip"></div>
                         </div>
                     </div>
                 </li>
